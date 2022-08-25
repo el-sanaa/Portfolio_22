@@ -576,6 +576,11 @@ form textarea {
 .mentions_legales h1{
   text-align: center;
 }
+.mentions_legales h1,
+.mentions_legales h2,
+.mentions_legales h3{
+  color: #198754;
+}
 
 
 
