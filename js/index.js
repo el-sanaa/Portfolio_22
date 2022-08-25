@@ -74,80 +74,74 @@ function tabsFilters() {
       });
     });
   
-  }
-  
+  }  
   showProjectDetails();
 
 
 
-//**************like 
-let vitesse = parseInt(document.querySelector('#carrousel').dataset.vitesse) ;
-//                                                                              par defaut
+//**************Page like - animation en js => prof Aziz 
+// let vitesse = parseInt(document.querySelector('#carrousel').dataset.vitesse) ;
+// par defaut
 console.log(vitesse);
 
 /* On liste les images */
-let mesImages = document.querySelectorAll('#reglette figure');
-let nbImages = mesImages.length;
+// let mesImages = document.querySelectorAll('#reglette figure');
+// let nbImages = mesImages.length;
 
 /* on définit la largeur de la réglette */
-let reglette = document.getElementById('reglette');
-reglette.style.width = nbImages * 100 + '%';
+// let reglette = document.getElementById('reglette');
+// reglette.style.width = nbImages * 100 + '%';
 
-function reorder() {
-    for (let i = 0; i < nbImages; i++) {
-        mesImages[i].style.order = i;
-        mesImages[i].style.width = 100 / nbImages + '%';
-    }
-}
-reorder();
+// function reorder() {
+//     for (let i = 0; i < nbImages; i++) {
+//         mesImages[i].style.order = i;
+//         mesImages[i].style.width = 100 / nbImages + '%';
+//     }
+// }
+// reorder();
 
-let compteurImages = 0;
-let timer1 = setInterval(carrousel,vitesse);
+// let compteurImages = 0;
+// let timer1 = setInterval(carrousel,vitesse);
 /*     let position = 0; */
 
-function carrousel(){
+// function carrousel(){
 
-    let position = 0;
-    let timer2 = setInterval(coulisse,20);
+//     let position = 0;
+//     let timer2 = setInterval(coulisse,20);
 
-    function coulisse(){
-        if(position == -100){
-            clearInterval(timer2);
+//     function coulisse(){
+//         if(position == -100){
+//             clearInterval(timer2);
 
-            mesImages[compteurImages].style.order = parseInt(mesImages[compteurImages].style.order) +  nbImages;
+//             mesImages[compteurImages].style.order = parseInt(mesImages[compteurImages].style.order) +  nbImages;
 
-            compteurImages++;
-            reglette.style.left = 0;
+//             compteurImages++;
+//             reglette.style.left = 0;
+
             // position = 0; 
-            if(compteurImages == nbImages){
-                compteurImages = 0;               
-                reorder();
-            }            
+//             if(compteurImages == nbImages){
+//                 compteurImages = 0;               
+//                 reorder();
+//             }            
  
-        }else{
-            position -= 2;
-            reglette.style.left = position + '%';
-        }
-    }
-}
+//         }else{
+//             position -= 2;
+//             reglette.style.left = position + '%';
+//         }
+//     }
+// }
 
 
-let monCarrousel = document.querySelector('#carrousel');
+// let monCarrousel = document.querySelector('#carrousel');
 
-monCarrousel.addEventListener('mouseenter',function(){
-    clearInterval(timer1)    ;
-});
+// monCarrousel.addEventListener('mouseenter',function(){
+//     clearInterval(timer1)    ;
+// });
 
-monCarrousel.addEventListener('mouseleave',function(){
+// monCarrousel.addEventListener('mouseleave',function(){
    // carrousel();
-    timer1 = setInterval(carrousel,vitesse);
-});
-
-
-
-
-
-
+//     timer1 = setInterval(carrousel,vitesse);
+// });
 
 
 
@@ -175,55 +169,10 @@ monCarrousel.addEventListener('mouseleave',function(){
 
 
   
-  // Skills
-  
-  // const observerIntersectionAnimation = () => {
-  //   const sections = document.querySelectorAll('section');
-  //   const skills = document.querySelectorAll('.skills .bar');
-  
-  //   sections.forEach((section, index) => {
-  //     if (index === 0) return;
-  //     section.style.opacity = "0";
-  //     section.style.transition = "all 1.6s";
-  //   });
-  
-  //   skills.forEach((elem, index) => {
-  
-  //     elem.style.width = "0";
-  //     elem.style.transition = "all 1.6s";
-  //   });
-  
-  //   let sectionObserver = new IntersectionObserver(function (entries, observer) {
-  //     entries.forEach(entry => {
-  //       if (entry.isIntersecting) {
-  //         let elem = entry.target;
-  //         elem.style.opacity = 1;
-  //       }
-  //     });
-  //   });
-  
-  //   sections.forEach(section => {
-  //     sectionObserver.observe(section);
-  //   });
-  
-  //   let skillsObserver = new IntersectionObserver(function (entries, observer) {
-  //     entries.forEach(entry => {
-  //       if (entry.isIntersecting) {
-  //         let elem = entry.target;
-  //         elem.style.width = elem.dataset.width + '%';
-  //       }
-  //     });
-  //   });
-  
-  //   skills.forEach(skill => {
-  //     skillsObserver.observe(skill);
-  //   });
-  // }
-  
-  // observerIntersectionAnimation();
 
 
-// Thinks
+
+// **************Page Thinks
 // const target = document.getElementById('target');
 // let array = ['Soutien', 'Gentillesse', 'Empathie'];
 

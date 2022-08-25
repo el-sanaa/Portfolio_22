@@ -1,3 +1,5 @@
+
+// *********Animation jquery => prof Frederick
 $(function () {
 
     let vitesse = parseInt($('#carrousel').data('vitesse')) || 4000;

@@ -2,7 +2,7 @@
 *{
   margin:0;
   padding:0;
-  box-sizing:border-box;
+  box-sizing:border-box;  
 }
 .body{
   font-family: 'Roboto Slab', serif;
@@ -162,6 +162,9 @@ a{
 }
 
 /************** Style about */
+.about{
+  margin: 0;
+}
 .about .title {
   margin-top: 5px;
 }
@@ -172,7 +175,11 @@ a{
 
 /************ Style portfolio */
 .portfolio {
-  background: #F5F5F5;
+  background: black;
+}
+.portfolio h2,
+.portfolio p{
+  color: white;
 }
 .portfolio .grid__item {
   margin-bottom: 0;
@@ -196,8 +203,8 @@ a{
   margin-bottom: 0;
 }
 .portfolio-filters a {
-  color: black;
-  background: rgb(230, 228, 228);
+  color: white;
+  background: #198754;
   display: flex;
   flex: 1;
   justify-content: center;
@@ -205,8 +212,8 @@ a{
   margin: 2px;
 }
 .portfolio-filters a.active {
-  color: black;
-  background: #b4bdc4;
+  color: white;
+  background: #198754;
 }
 .modal {
   visibility: hidden;
@@ -497,9 +504,9 @@ form textarea {
   max-width: 900px;
   display: flex; 
 }
-.bg_color{
+/* .bg_color{
   background: #198754 ;
-}
+} */
 .card_img{
   width: 100%;
   height: auto;
@@ -510,7 +517,7 @@ form textarea {
   color: white;
 }
 .nav-nav-item a{
-  color: #000;
+  color: white;
 }
 /* .nav-tab{
   border-bottom: 1px solid black;
