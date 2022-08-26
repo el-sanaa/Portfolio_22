@@ -1,6 +1,5 @@
 
 /* Porfolio */
-
 function tabsFilters() {
     const tabs = document.querySelectorAll('.portfolio-filters a');
     const projets = document.querySelectorAll('.portfolio .card');
@@ -82,7 +81,7 @@ function tabsFilters() {
 //**************Page like - animation en js => prof Aziz 
 // let vitesse = parseInt(document.querySelector('#carrousel').dataset.vitesse) ;
 // par defaut
-console.log(vitesse);
+// console.log(vitesse);
 
 /* On liste les images */
 // let mesImages = document.querySelectorAll('#reglette figure');
@@ -144,83 +143,56 @@ console.log(vitesse);
 // });
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   
 
 
 
 // **************Page Thinks
-// const target = document.getElementById('target');
-// let array = ['Soutien', 'Gentillesse', 'Empathie'];
+const target = document.getElementById('target');
+let array = ['Soutien', 'Gentillesse', 'Empathie'];
 
-// let wordIndex = 0;
-// let letterIndex = 0;
+let wordIndex = 0;
+let letterIndex = 0;
 
-// const createLetter = () =>{
-//   const letter = document.createElement('span');
-//   target.appendChild(letter);
+const createLetter = () =>{
+  const letter = document.createElement('span');
+  target.appendChild(letter);
 
-//   letter.classList.add('letter');
-//   letter.style.opacity = '0';
-//   letter.style.animation = 'anim 5s ease forwards';
-//   letter.textContent = array[wordIndex][letterIndex];
+  letter.classList.add('letter');
+  letter.style.opacity = '0';
+  letter.style.animation = 'anim 5s ease forwards';
+  letter.textContent = array[wordIndex][letterIndex];
 
-//   setTimeout(() =>{
-//     letter.remove();
+  setTimeout(() =>{
+    letter.remove();
 
-//   }, 2000 );
-// }
+  }, 2000 );
+}
 
-// const loop = () =>{
-//   setTimeout(() =>{
-//     if(wordIndex >= array.length){
-//       wordIndex = 0;
-//       letterIndex = 0;
-//       loop();
-//     }
+const loop = () =>{
+  setTimeout(() =>{
+    if(wordIndex >= array.length){
+      wordIndex = 0;
+      letterIndex = 0;
+      loop();
+    }
 
-//     else if(letterIndex < array[wordIndex].length){
-//       createLetter();
-//       letterIndex++;
-//       loop();
+    else if(letterIndex < array[wordIndex].length){
+      createLetter();
+      letterIndex++;
+      loop();
     
-//     }else{
-//       letterIndex = 0;
-//       wordIndex++;
-//       setTimeout(() =>{
-//         loop();
-//       }, 2000);
+    }else{
+      letterIndex = 0;
+      wordIndex++;
+      setTimeout(() =>{
+        loop();
+      }, 2000);
 
-//     }
-//   }, 80);
-// }
-// loop();
-
-
-
-// createLetter();
+    }
+  }, 80);
+}
+loop();
+createLetter();
 
 
